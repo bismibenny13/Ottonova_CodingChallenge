@@ -6,8 +6,8 @@ describe('PokeAPI Backend Test', () => {
         expect(response.status).to.eq(200);
   
         // Assert that the response body includes "moves" and "abilities" properties
-        //Testing
-        expect(response.body).to.have.property('moves');
+       
+        expect(response.body).to.have.property('id');
         expect(response.body).to.have.property('abilities');
 
         expect(response.body.name).to.eq('pikachu');
