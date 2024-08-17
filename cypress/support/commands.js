@@ -9,9 +9,5 @@ Cypress.Commands.add('acceptCookies', () => {
       }
     });
   });
-  Cypress.Commands.add('selectDate', (day, month, year) => {
-    cy.get('input[data-cy="day"]').type(day);
-    cy.get('input[data-cy="month"]').type(month);
-    cy.get('input[data-cy="year"]').type(year);
-  });
+  
   
