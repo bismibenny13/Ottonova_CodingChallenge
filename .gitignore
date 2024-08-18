@@ -1,0 +1,3 @@
+cypress/e2e/calendar.cy.js
+cypress/e2e/frontend/ScenarioTwo.cy.js
+cypress/support/pages/DentalPage.js

@@ -16,19 +16,22 @@ class CalculatorPage {
       }
    
   
-    selectIngressDate(dateToSelect) {
-      // Select date from dropdown dynamically
-    cy.get('select[data-cy="ingress-date"]').then($dropdown => {
-        const options = $dropdown.find('option');
+    /*selectIngressDate(dateToSelect) {
+       Select date from dropdown dynamically
+       cy.get('select[data-cy="ingress-date"]').then($dropdown => {
+       const options = $dropdown.find('option');
         cy.wrap(options).each(option => {
-          const $option = Cypress.$(option);
-          if ($option.text().trim() === dateToSelect) {
+        const $option = Cypress.$(option);
+        if ($option.text().trim() === dateToSelect) {
             cy.wrap($dropdown).select($option.val()).should('have.value', $option.val());
             return false; // Exit loop once the correct option is found and selected
-          }
-        });
-      });
-    }
+          }*/
+           selectIngressDate(dateToSelect) {
+            cy.get('select[data-cy="ingress-date"]').select(dateToSelect).should('have.value', dateToSelect);
+  }
+        //});
+     // });
+   // }
   
     continueInsuranceProduct() {
       cy.get('button[data-cy="insurance-product-continue"]').click();
