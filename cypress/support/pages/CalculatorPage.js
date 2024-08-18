@@ -25,14 +25,15 @@ class CalculatorPage {
         if ($option.text().trim() === dateToSelect) {
             cy.wrap($dropdown).select($option.val()).should('have.value', $option.val());
             return false; // Exit loop once the correct option is found and selected
-          }*/
+          }
+         });
+     });
+    }*/
+  
            selectIngressDate(dateToSelect) {
             cy.get('select[data-cy="ingress-date"]').select(dateToSelect).should('have.value', dateToSelect);
   }
-        //});
-     // });
-   // }
-  
+        
     continueInsuranceProduct() {
       cy.get('button[data-cy="insurance-product-continue"]').click();
     }
